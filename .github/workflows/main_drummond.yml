@@ -32,23 +32,17 @@ jobs:
             
       - name: Yarn install shared      
         run: |
-          cd packages/shared           
-          npm remove node_modules 
-          npm remove package-lock.json
+          cd packages/shared            
           yarn
           
       - name: Yarn install web
         run: |
-          cd packages/web 
-          npm remove node_modules 
-          npm remove package-lock.json
+          cd packages/web    
           yarn             
           
       - name: yarn install api
         run: |
-          cd packages/api 
-          npm remove node_modules 
-          npm remove package-lock.json
+          cd packages/api    
           yarn            
           
       - name: yarn install shared for all 
