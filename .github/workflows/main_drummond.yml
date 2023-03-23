@@ -39,7 +39,7 @@ jobs:
           
       - name: yarn install shared for all 
         run: |          
-          yarn lerna bootstrap -- --legacy-peer-deps
+          npx lerna bootstrap -- --legacy-peer-deps
         
       - name: Build
         run: yarn lerna run build
