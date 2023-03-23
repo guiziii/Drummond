@@ -7,7 +7,7 @@
   "command": {
         "bootstrap": {
             "npmClientArgs": [
-                "--legacy-peer-deps"
+                "-- --legacy-peer-deps"
             ]
         }
     }
