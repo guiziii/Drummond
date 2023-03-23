@@ -15,7 +15,8 @@
 ### 3) Register Form Page
 [![N|Solid](https://i.imgur.com/8D9wCmQ.jpg)](https://nodesource.com/products/nsolid)
 
-
+### 4) Swagger API
+[![N|Solid](https://i.imgur.com/XlObMPA.jpg)](https://nodesource.com/products/nsolid)
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 ### 1) Entre na raiz do projeto e rode "yarn" para iniciar a instalação das dependências do projeto padrão.
