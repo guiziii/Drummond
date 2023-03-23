@@ -19,26 +19,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v1
         with:
-          node-version: '16.x'     
-         
-      - name: Yarn install
-        run: |
-          yarn    
-            
-      - name: Yarn install shared      
-        run: |
-          cd packages/shared            
-          yarn
-          
-      - name: Yarn install web
-        run: |
-          cd packages/web    
-          yarn             
-          
-      - name: yarn install api
-        run: |
-          cd packages/api    
-          yarn            
+          node-version: '16.x'                    
           
       - name: yarn install shared for all 
         run: |          
