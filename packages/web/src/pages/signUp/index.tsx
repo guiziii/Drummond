@@ -123,6 +123,13 @@ const useStyles = makeStyles(() => ({
     padding: 30,
     textAlign: "center",
   },
+
+  TitleText: {
+    padding: 30,
+    textAlign: "center",
+    fontWeight: "600 !important",
+    fontSize: "1.3rem !important",
+  },
 }));
 
 function SignUp() {
@@ -301,6 +308,10 @@ function SignUp() {
       <Grid item xs={12} md={6} lg={6} px={2} py={2}>
         <Card className={classes.CardContainer}>
           <img src={companyLogo} className={classes.CompanyLogoImg} />
+
+          <DTypography className={classes.TitleText}>
+            {t(Strings.SIGN_UP_TEXT)}
+          </DTypography>
 
           <Tabs
             orientation={"horizontal"}
