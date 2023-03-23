@@ -20,22 +20,36 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '16.x'
-
+          
+      - name: Clean
+        run: |
+         npm remove node_modules 
+         npm remove package-lock.json
+         
       - name: Yarn install
         run: |
           yarn    
-          
-      - name: Yarn install shared
+            
+      - name: Yarn install shared      
         run: |
-          cd packages/shared && yarn   
+          cd packages/shared           
+          npm remove node_modules 
+          npm remove package-lock.json
+          yarn
           
       - name: Yarn install web
         run: |
-          cd packages/web && yarn   
+          cd packages/web 
+          npm remove node_modules 
+          npm remove package-lock.json
+          yarn             
           
       - name: yarn install api
         run: |
-          cd packages/api && yarn  
+          cd packages/api 
+          npm remove node_modules 
+          npm remove package-lock.json
+          yarn            
           
       - name: yarn install shared for all 
         run: |          
