@@ -44,3 +44,9 @@ yarn api -> Executa a API.
 yarn apidev -> Executa a API em ambiente de desenvolvimento.
 yarn web -> Executa o WEB
 ```
+
+### 5) Crie um env na raiz do projeto web para acesso a API com o seguinte:
+
+```sh
+VITE_API_URL = http://localhost:3000
+```
