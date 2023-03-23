@@ -4,16 +4,23 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "api":"cd packages && cd api && yarn start",
-    "apidev":"cd packages && cd api && yarn start:debug",
-    "web":"cd packages && cd web && yarn dev",
-    "webinstall":"cd packages && cd web && yarn"
+    "api": "cd packages && cd api && yarn start",
+    "apidev": "cd packages && cd api && yarn start:debug",
+    "web": "cd packages && cd web && yarn dev",
+    "webinstall": "cd packages && cd web && yarn",
+    "build:server": "lerna run build --scope={@abb/shared,@abb/api}",
+    "build:web": "lerna run build --scope={@abb/shared,@abb/controller,@abb/web}"
   },
-  "workspaces":{
-    "packages":["packages/*"],
+  "devDependencies": {
+    "lerna": "^2.11.0"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
     "nohoist": [
       "**/react-native",
-      "*/react-native/*"      
+      "*/react-native/*"
     ]
   }
 }
