@@ -1,0 +1,19 @@
+{
+  "name": "drummond-advisors",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "api":"cd packages && cd api && yarn start",
+    "apidev":"cd packages && cd api && yarn start:debug",
+    "web":"cd packages && cd web && yarn dev",
+    "webinstall":"cd packages && cd web && yarn"
+  },
+  "workspaces":{
+    "packages":["packages/*"],
+    "nohoist": [
+      "**/react-native",
+      "*/react-native/*"      
+    ]
+  }
+}
