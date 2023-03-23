@@ -20,6 +20,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '16.x'                    
+      
+      - name: Yarn install
+        run: |
+          yarn  
           
       - name: yarn install shared for all 
         run: |          
