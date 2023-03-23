@@ -19,12 +19,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v1
         with:
-          node-version: '16.x'
-          
-      - name: Clean
-        run: |
-         npm remove node_modules 
-         npm remove package-lock.json
+          node-version: '16.x'     
          
       - name: Yarn install
         run: |
