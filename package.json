@@ -7,7 +7,8 @@
     "api": "cd packages && cd api && yarn start",
     "apidev": "cd packages && cd api && yarn start:debug",
     "web": "cd packages && cd web && yarn dev",
-    "webinstall": "cd packages && cd web && yarn"
+    "webinstall": "cd packages && cd web && yarn",
+    "web:buildprod": "yarn lerna run build && netlify deploy --prod"
   },
   "devDependencies": {
     "lerna": "^2.11.0"
