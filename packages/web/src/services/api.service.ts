@@ -1,7 +1,8 @@
 import axios from "axios";
+import Keys from "../utils/keys";
 
-export function ReturnBaseUrl(useSSL = false, useUser = true) {
-  return import.meta.env.VITE_API_URL;
+export function ReturnBaseUrl() {
+  return Keys.API_URL;
 }
 
 export const HttpStatus = {
