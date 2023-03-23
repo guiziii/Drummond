@@ -28,7 +28,7 @@ describe.only('FormService', () => {
     formService = module.get<FormService>(FormService);
   });
 
-  it('should call saveNote method with expected params', async () => {
+  it('should call create form method with expected params', async () => {
     const createNoteSpy = jest.spyOn(formService, 'create');
     const dto = new CreateFormDto();
     formService.create(dto);

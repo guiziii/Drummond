@@ -9,8 +9,8 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe());
 
   const config = new DocumentBuilder()
-    .setTitle('form')
-    .setDescription('Form API')
+    .setTitle('Criação de forms')
+    .setDescription('API de cadastro para a DrummondForms')
     .setVersion('1.0')
     .addTag('form')
     .build();
