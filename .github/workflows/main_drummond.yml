@@ -35,7 +35,7 @@ jobs:
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v2
         with:
-          name: production-files
+          name: node-app
           path: ./packages/web/dist
 
   deploy:
