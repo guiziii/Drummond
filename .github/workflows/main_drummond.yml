@@ -27,6 +27,7 @@ jobs:
           
       - name: yarn install shared for all 
         run: |          
+          npm cache clean --force
           yarn lerna bootstrap  
         
       - name: Build
