@@ -33,7 +33,7 @@ jobs:
       - name: Creating .env WEB
         run: |
           cd packages/web
-          echo VITE_API_URL = http://localhost:3000 >> .env &
+          echo VITE_API_URL = https://drummondapi.azurewebsites.net >> .env &
           echo VITE_FIREBASE_API_KEY = AIzaSyDceH9amyB2Var1mFx0GqMO1o1bt7E_fbY >> .env &
           echo VITE_FIREBASE_AUTH_DOMAIN = drummond-e8706.firebaseapp.com >> .env &
           echo VITE_FIREBASE_PROJECT_ID = drummond-e8706 >> .env &
