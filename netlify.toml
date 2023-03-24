@@ -1,3 +1,0 @@
-# repository root netlify.toml
-[build]
-  command = "yarn lerna run build"  
