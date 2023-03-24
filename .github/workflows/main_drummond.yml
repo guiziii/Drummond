@@ -19,20 +19,32 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v1
         with:
-          node-version: '16.x'                    
-      
+          node-version: "16.x"
+
       - name: Yarn install
         run: |
-          yarn  
-          
-      - name: yarn install shared for all 
-        run: |          
+          yarn
+
+      - name: yarn install shared for all
+        run: |
           npm cache clean --force
-          yarn lerna bootstrap  
-        
+          yarn lerna bootstrap
+
+      - name: Creating .env
+        run: |
+          cd packages/web
+          echo VITE_API_URL = http://localhost:3000 >> .env &
+          echo VITE_FIREBASE_API_KEY = AIzaSyDceH9amyB2Var1mFx0GqMO1o1bt7E_fbY >> .env &
+          echo VITE_FIREBASE_AUTH_DOMAIN = drummond-e8706.firebaseapp.com >> .env &
+          echo VITE_FIREBASE_PROJECT_ID = drummond-e8706 >> .env &
+          echo VITE_FIREBASE_STORAGE_BUCKET = drummond-e8706.appspot.com >> .env &
+          echo VITE_FIREBASE_MESSAGING_SENDER_ID = 279886335338 >> .env &
+          echo VITE_FIREBASE_MESSAGING_APPID = 1:279886335338:web:d220d616dc14bdc2ac6913 >> .env &
+          echo VITE_FIREBASE_MESSAGING_MEASUREMENT_ID = G-N8LKHKK1NE >> .env
+
       - name: Build
         run: yarn lerna run build
-        
+
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v2
         with:
@@ -43,7 +55,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     environment:
-      name: 'Production'
+      name: "Production"
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
@@ -52,11 +64,11 @@ jobs:
         with:
           name: node-app
 
-      - name: 'Deploy to Azure Web App'
+      - name: "Deploy to Azure Web App"
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'Drummond'
-          slot-name: 'Production'
+          app-name: "Drummond"
+          slot-name: "Production"
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2512230782F64E20B4F38946EBAC4DC1 }}
           package: .

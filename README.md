@@ -4,10 +4,11 @@
 
 ## 1) O que foi utilizado?
 
-- Monorepo (Yarn workspaces)
-- NestJS
-- MongoDB
-- React JS
+- Monorepo (Yarn workspaces) - https://classic.yarnpkg.com/lang/en/docs/workspaces/
+- NestJS - https://nestjs.com/
+- MongoDB - https://www.mongodb.com/
+- React JS - https://pt-br.reactjs.org/
+- Lerna - https://lerna.js.org/
 
 ## Demonstração
 
