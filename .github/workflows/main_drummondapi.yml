@@ -19,25 +19,36 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v1
         with:
-          node-version: '16.x'
+          node-version: "16.x"
 
-      - name: npm install, build, and test
+      - name: Yarn install
         run: |
-          npm install
-          npm run build --if-present
-          npm run test --if-present
+          yarn
 
-      - name: Upload artifact for deployment job
+      - name: yarn install shared for all
+        run: |
+          npm cache clean --force
+          yarn lerna bootstrap
+
+      - name: Creating .env API
+        run: |
+          cd packages/api
+          echo DATABASE_CONNECTION_STRING = mongodb+srv://qmguiziii:1234@cluster0.41qxb82.mongodb.net/test >> .env
+
+      - name: Build
+        run: yarn lerna run build
+
+      - name: Upload production-ready build files
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: .
+          path: ./packages/api/dist
 
   deploy:
     runs-on: ubuntu-latest
     needs: build
     environment:
-      name: 'Production'
+      name: "Production"
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
@@ -46,11 +57,11 @@ jobs:
         with:
           name: node-app
 
-      - name: 'Deploy to Azure Web App'
+      - name: "Deploy to Azure Web App"
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'drummondapi'
-          slot-name: 'Production'
+          app-name: "drummondapi"
+          slot-name: "Production"
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7F90C9C3BF6040B1AF5A2984EBA7CA16 }}
           package: .

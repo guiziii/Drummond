@@ -30,7 +30,7 @@ jobs:
           npm cache clean --force
           yarn lerna bootstrap
 
-      - name: Creating .env
+      - name: Creating .env WEB
         run: |
           cd packages/web
           echo VITE_API_URL = http://localhost:3000 >> .env &
