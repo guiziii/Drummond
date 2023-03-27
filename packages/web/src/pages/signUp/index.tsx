@@ -1,5 +1,3 @@
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../firebase/firebase";
 import companyLogo from "@drummond-advisors/shared/assets/companyLogo.webp";
 import loginImage from "@drummond-advisors/shared/assets/loginImage.jpg";
 import { Validations } from "@drummond-advisors/shared/utils";
@@ -13,27 +11,28 @@ import {
   IconButton,
   InputAdornment,
   Tab,
-  Tabs,
-  TextFieldProps,
+  Tabs
 } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import { makeStyles } from "@mui/styles";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { FormEvent, useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
+import isAuthenticated from "../../auth";
 import DButton from "../../components/DButton";
+import DSnackbar from "../../components/DSnackbar";
 import DTextField from "../../components/DTextField";
+import { DTextFieldProps } from "../../components/DTextField/types";
 import DTypography from "../../components/DTypography";
+import { StoreContext } from "../../context";
+import { auth } from "../../firebase/firebase";
+import languages from "../../i18n/languages";
 import Metrics from "../../metrics";
+import localStorageForm from "../../storage";
 import Footer from "./components/footer";
 import Setup from "./config";
 import "./styles.css";
-import languages from "../../i18n/languages";
-import isAuthenticated from "../../auth";
-import { useNavigate } from "react-router-dom";
-import { StoreContext } from "../../context";
-import { SetUserLS } from "../../storage";
-import { DTextFieldProps } from "../../components/DTextField/types";
-import DSnackbar from "../../components/DSnackbar";
 
 const { Strings, Sizes, Others } = Setup;
 
@@ -180,7 +179,7 @@ function SignUp() {
       )
         .then(userCredential => {
           const user = userCredential.user;
-          SetUserLS(user);
+          localStorageForm.User.SetUserLS(user);
           dispatch({ type: `SET_USER`, payload: user });
           navigate("/insertForm");
         })

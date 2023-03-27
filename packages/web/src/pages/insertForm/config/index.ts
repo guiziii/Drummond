@@ -1,4 +1,5 @@
 import { Country } from "country-state-city";
+import { IFirebaseError } from "../../../firebase/interfaces";
 
 const Strings = {
   MISSION_TEXT: `MissionDescription`,
@@ -67,10 +68,9 @@ const Sizes = {
   MAN_IMAGE_SIZE: `8rem`,
 };
 
-interface IFirebaseError {
-  code: string;
-  message: string;
-}
+const Screens = {
+  signUp: "signUp",
+};
 
 const Others = {
   FirebaseErrorCodes: [
@@ -85,6 +85,7 @@ const Setup = {
   Strings,
   Sizes,
   Others,
+  Screens,
   InitialState,
 };
 

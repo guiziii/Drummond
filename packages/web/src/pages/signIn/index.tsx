@@ -15,7 +15,7 @@ import {
   IconButton,
   InputAdornment,
   Tab,
-  Tabs,
+  Tabs
 } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import CircularProgress from "@mui/material/CircularProgress";
@@ -33,7 +33,7 @@ import DTypography from "../../components/DTypography";
 import { StoreContext } from "../../context";
 import { auth } from "../../firebase/firebase";
 import Metrics from "../../metrics";
-import { SetUserLS } from "../../storage";
+import localStorageForm from "../../storage";
 import Divider from "./components/divider";
 import Footer from "./components/footer";
 import Setup from "./config";
@@ -178,7 +178,8 @@ function SignIn() {
       signInWithEmailAndPassword(auth, userData.email, userData.password)
         .then(userCredential => {
           const user = userCredential.user;
-          SetUserLS(user);
+
+          localStorageForm.User.SetUserLS(user);
           dispatch({ type: `SET_USER`, payload: user });
           navigate("/insertForm");
         })

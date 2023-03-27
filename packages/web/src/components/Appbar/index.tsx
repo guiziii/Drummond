@@ -10,7 +10,7 @@ import Tooltip from "@mui/material/Tooltip";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
 import { useNavigate } from "react-router-dom";
-import { RemoveOfflineFormLS, RemoveUserLS } from "../../storage";
+import localStorageForm, { RemoveOfflineFormLS } from "../../storage";
 import { StoreContext } from "../../context";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -60,7 +60,7 @@ function ResponsiveAppBar() {
       onClick: () => {
         handleCloseUserMenu();
         dispatch({ type: `SET_USER`, payload: null });
-        RemoveUserLS();
+        localStorageForm.User.RemoveUserLS();
         RemoveOfflineFormLS();
         navigate("/");
       },

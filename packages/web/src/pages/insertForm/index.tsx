@@ -346,7 +346,6 @@ function InsertForm() {
       name: "cpf",
       label: "CPF",
       id: "cpf",
-
       inputMaskText: "999.999.999-99",
       value: formData.cpf,
       onChange: event => {
@@ -363,7 +362,6 @@ function InsertForm() {
       label: t(Strings.BIRTHDATE_TEXT),
       InputLabelProps: { shrink: true },
       type: "date",
-
       value: formData.birthDate,
       variant: "outlined",
       onChange: event => {
@@ -379,7 +377,6 @@ function InsertForm() {
       label: t(Strings.DESCRIPTION_TEXT),
       id: "description",
       value: formData.description,
-
       onChange: event => {
         setFormData(old => ({ ...old, description: event.target.value }));
       },

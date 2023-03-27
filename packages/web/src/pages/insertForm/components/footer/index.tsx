@@ -1,10 +1,10 @@
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import Setup from "../../config";
-import { NavLink, useNavigate } from "react-router-dom";
 
-const { Strings } = Setup;
+const { Strings ,Screens} = Setup;
 
 const Footer: React.FC = () => {
   const navigate = useNavigate();
@@ -22,14 +22,14 @@ const Footer: React.FC = () => {
         <Link
           component="button"
           variant="caption"
-          onClick={() => NavigateTo("signUp")}
+          onClick={() => NavigateTo(Screens.signUp)}
         >
           {t(Strings.FORGOT_PASSWORD_TEXT)}
         </Link>
       </Grid>
       <Grid item xs={12} md={12} lg={12}>
         <Link
-          onClick={() => NavigateTo("signUp")}
+          onClick={() => NavigateTo(Screens.signUp)}
           component="button"
           variant="caption"
           textAlign="right"

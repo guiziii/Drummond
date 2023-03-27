@@ -1,8 +1,8 @@
 # DrummondForms
 
-### Proposal: Registration of forms!
+### Proposta: Cadastro de forms!
 
-## 1) What was used?
+## 1) O que foi utilizado?
 
 - Monorepo (Yarn workspaces) - https://classic.yarnpkg.com/lang/en/docs/workspaces/
 - NestJS - https://nestjs.com/
@@ -16,7 +16,7 @@
 - Github Actions - https://github.com/features/actions
 - Playwright - https://playwright.dev/
 
-## 2) Demo
+## 2) Demonstração
 
 ### 2.1) Sign In Page (Firebase Auth)
 
@@ -26,7 +26,7 @@
 
 [![N|Solid](https://i.imgur.com/tRIRJcH.jpg)](https://nodesource.com/products/nsolid)
 
-### 2.3) Register Form Page
+### 2.3) Register Form Page 
 
 [![N|Solid](https://i.imgur.com/8D9wCmQ.jpg)](https://nodesource.com/products/nsolid)
 [![N|Solid](https://i.imgur.com/ldzoRRc.jpg)](https://nodesource.com/products/nsolid)
@@ -35,37 +35,37 @@
 
 [![N|Solid](https://i.imgur.com/XlObMPA.jpg)](https://nodesource.com/products/nsolid)
 
-## 3) Installation
+## 3) Instalação 
 
-### 3.1) Enter the root of the project and run "yarn" to start installing the default project dependencies.
+### 3.1) Entre na raiz do projeto e rode "yarn" para iniciar a instalação das dependências do projeto padrão.
 
 ```sh
 yarn
 ```
 
-### 3.2) Enter the "web" project to start installing the project's dependencies.
+### 3.2) Entre no projeto "web" para iniciar a instalação das dependências do projeto.
 
 ```sh
 cd packages/web
 yarn
 ```
 
-### 3.3) Enter the "api" project to start installing the project's dependencies.
+### 3.3) Entre no projeto "api" para iniciar a instalação das dependências do projeto.
 
 ```sh
 cd packages/api
 yarn
 ```
 
-### 3.4) It is now possible to run all folders from the default directory.
+### 3.4) Agora é possível executar todas as pastas do diretório padrão.
 
 ```sh
-yarn api -> Executes the API.
-yarn apidev -> Runs the API in development environment.
-yarn web -> Run the WEB
+yarn api -> Executa a API.
+yarn apidev -> Executa a API em ambiente de desenvolvimento.
+yarn web -> Executa o WEB
 ```
 
-### 3.5) Create an .env file  in the root of the web project for API access with the following:
+### 3.5) Crie um env na raiz do projeto web para acesso a API com o seguinte:
 
 ```sh
 VITE_API_URL = http://localhost:3000
@@ -78,7 +78,7 @@ VITE_FIREBASE_MESSAGING_APPID = 1:279886335338:web:d220d616dc14bdc2ac6913
 VITE_FIREBASE_MESSAGING_MEASUREMENT_ID = G-N8LKHKK1NE
 ```
 
-### 3.6) Create an .env file in the root of the api project for database access with the following:
+### 3.6) Crie um env na raiz do projeto api para acesso ao database com o seguinte:
 
 ```sh
 DATABASE_CONNECTION_STRING = mongodb+srv://qmguiziii:1234@cluster0.41qxb82.mongodb.net/test
