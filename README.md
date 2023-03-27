@@ -9,6 +9,11 @@
 - MongoDB - https://www.mongodb.com/
 - React JS - https://pt-br.reactjs.org/
 - Lerna - https://lerna.js.org/
+- Vite - https://vitejs.dev/
+- Firebase - https://firebase.google.com/?hl=pt-br
+- Swagger - https://swagger.io/
+- MUI - https://mui.com/
+- Github Actions - https://github.com/features/actions
 
 ## Demonstração
 
