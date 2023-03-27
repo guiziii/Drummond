@@ -14,6 +14,7 @@
 - Swagger - https://swagger.io/
 - MUI - https://mui.com/
 - Github Actions - https://github.com/features/actions
+- Playwright - https://playwright.dev/
 
 ## 2) Demonstração
 
