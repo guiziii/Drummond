@@ -17,15 +17,15 @@
 
 ## Demonstração
 
-### 1) Sign In Page
+### 1) Sign In Page (Firebase Auth)
 
 [![N|Solid](https://i.imgur.com/sI615as.jpg)](https://nodesource.com/products/nsolid)
 
-### 2) Sign Up Page
+### 2) Sign Up Page (Firebase Auth)
 
 [![N|Solid](https://i.imgur.com/tRIRJcH.jpg)](https://nodesource.com/products/nsolid)
 
-### 3) Register Form Page
+### 3) Register Form Page 
 
 [![N|Solid](https://i.imgur.com/8D9wCmQ.jpg)](https://nodesource.com/products/nsolid)
 [![N|Solid](https://i.imgur.com/ldzoRRc.jpg)](https://nodesource.com/products/nsolid)
